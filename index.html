@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Easy Khata - Home</title>
+</head>
+
+<body>
+    <!-- HEADER STARTS HERE -->
+    <div class="container-fluid header">
+        <div class="container">
+            <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand" href="index.html">
+                    <!-- LOGO -->
+                    <img src="./img/Logo.png" class="nav__img" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <!-- SIDEBAR ICON -->
+                    <img src="./img/Icon material-menu.svg" style="height: 22px" alt="" />
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active__link">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <span onclick="features()" class="nav-link" href="">Features</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" onclick="work()">How it Works</span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" onclick="contact()">Contact</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="web.html" target="_blank">Easy Khata Web</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- HEADER ENDS HERE -->
+
+    <!-- BANNER STARTS HERE -->
+    <div class="
+        banner
+        container-fluid
+        d-flex
+        flex-column
+        justify-content-center
+        align-items-center
+      " style="background-image: url(./img/banner.png)">
+        <div class="container">
+            <div class="row">
+                <div class="
+              col-md-5
+              text-white
+              d-flex
+              flex-column
+              justify-content-center
+            ">
+                    <h1 data-aos="fade-right"  data-aos-delay="300">Awesome app to manage your business accounts/ledger.</h1>
+                    <p data-aos="fade-right"  data-aos-delay="600">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+                        fugit reiciendis eveniet asperiores dolorum eaque nobis atque,
+                        incidunt suscipit, pariatur explicabo ea aperiam distinctio culpa
+                        non architecto autem amet laborum.
+                    </p>
+                    <a 
+                     data-aos="fade-right"  data-aos-delay="800" href="web.html" class="banner-button">Discover</a>
+                </div>
+                <div class="col-md-7" >
+                    <img class="banner-img" src="./img/banner-phone.png" alt=""  data-aos="fade-down"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER ENDS HERE -->
+
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="contaier py-5"></div>
+        <div class="container d-app py-5 mt-5" >
+            <img src="./img/b2.png" class="w-100" alt="" data-aos="fade-down"/>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4" >
+                    <img src="./img/a2.png" class="w-100" alt="" data-aos="fade-up"  data-aos-delay="300"/>
+                </div>
+                <div class="col-md-7">
+                    <div class="text-white">
+                        <h1>Download Our App Now</h1>
+                        <div class="row">
+                            <div class="contacts col-md-12">
+                                <img src="./img/a (1).png" alt="" />
+                                <img src="./img/a (2).png" alt="" />
+                                <img src="./img/a (3).png" alt="" />
+                                <img src="./img/a (4).png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- app features -->
+    <div class="container py-5" id="features">
+        <div class="row justify-content-center"  data-aos="fade-down">
+            <div class="col-md-8 text-center">
+                <h3>Awesome App Features</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+                    incidunt odio asperiores culpa ipsa, quam tempore reiciendis
+                    debitis! Alias, commodi!
+                </p>
+            </div>
+        </div>
+        <br />
+        <div class="row"  data-aos="fade-down">
+            <div class="col-md-4 d-flex flex-column align-items-center p-3">
+                <img src="./img/f1.png" alt="" />
+                <h3 class="text-center">Offline Support</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                    quas possimus aliquam cupiditate quibusdam aspernatur eaque quod,
+                    minima amet ipsam! Voluptatum ipsam nobis quia in dolores amet
+                    labore veritatis voluptas!
+                </p>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center p-3">
+                <img src="./img/f2.png" alt="" />
+                <h3 class="text-center">Automatic Backup</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                    quas possimus aliquam cupiditate quibusdam aspernatur eaque quod,
+                    minima amet ipsam! Voluptatum ipsam nobis quia in dolores amet
+                    labore veritatis voluptas!
+                </p>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center p-3">
+                <img src="./img/f1.png" alt="" />
+                <h3 class="text-center">Multiple Languages</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                    quas possimus aliquam cupiditate quibusdam aspernatur eaque quod,
+                    minima amet ipsam! Voluptatum ipsam nobis quia in dolores amet
+                    labore veritatis voluptas!
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- app features ends here -->
+
+    <!-- How to use app -->
+    <div id="work" class="container-fluid app-work" style="
+        background-image: url(./img/appusebanner.png);
+        background-position: center;
+        background-size: cover;
+      ">
+        <div class="container mt-5 py-5 text-white">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center" data-aos="fade-down">
+                    <h3>How does Easy Khata app Works?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+                        incidunt odio asperiores culpa ipsa, quam tempore reiciendis
+                        debitis! Alias, commodi!
+                    </p>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row step"  data-aos="fade-down">
+                        <div class="
+                  col-md-3
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  flex-column
+                ">
+                            <img class="w-100" src="./img/h1.png" alt="" />
+                            <span class="h-100 bg-light w2"></span>
+                        </div>
+                        <div class="col-md-9">
+                            <br />
+                            <h6>Download Free Khata App</h6>
+                            <p style="font-size: 14px">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, molestiae vitae, voluptatibus suscipit quidem
+                                ratione velit quia accusamus adipisci nostrum amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row step"  data-aos="fade-down">
+                        <div class="
+                  col-md-3
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  flex-column
+                ">
+                            <img class="w-100" src="./img/h2.png" alt="" />
+                            <span class="h-100 bg-light w2"></span>
+                        </div>
+                        <div class="col-md-9">
+                            <br />
+                            <h6>Download Free Khata App</h6>
+                            <p style="font-size: 14px">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, molestiae vitae, voluptatibus suscipit quidem
+                                ratione velit quia accusamus adipisci nostrum amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row step"  data-aos="fade-down">
+                        <div class="
+                  col-md-3
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  flex-column
+                ">
+                            <img class="w-100" src="./img/h3.png" alt="" />
+                            <span class="h-100 bg-light w2"></span>
+                        </div>
+                        <div class="col-md-9">
+                            <br />
+                            <h6>Download Free Khata App</h6>
+                            <p style="font-size: 14px">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, molestiae vitae, voluptatibus suscipit quidem
+                                ratione velit quia accusamus adipisci nostrum amet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 px-5 mb-5 phone-img"  data-aos="fade-down">
+                    <img class="w-100" src="./img/app.png" alt="" />
+                </div>
+                <div class="col-md-4">
+                    <div class="row step"  data-aos="fade-down">
+                        <div class="
+                  col-md-3
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  flex-column
+                ">
+                            <img class="w-100" src="./img/h4.png" alt="" />
+                            <span class="h-100 bg-light w2"></span>
+                        </div>
+                        <div class="col-md-9">
+                            <br />
+                            <h6>Download Free Khata App</h6>
+                            <p style="font-size: 14px">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, molestiae vitae, voluptatibus suscipit quidem
+                                ratione velit quia accusamus adipisci nostrum amet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row step mb50"  data-aos="fade-down">
+                        <div class="
+                  col-md-3
+                  d-flex
+                  align-items-center
+                  justify-content-center
+                  flex-column
+                ">
+                            <img class="w-100" src="./img/h5.png" alt="" />
+                            <span class="h-100 bg-light w2"></span>
+                        </div>
+                        <div class="col-md-9">
+                            <br />
+                            <h6>Download Free Khata App</h6>
+                            <p style="font-size: 14px">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores, molestiae vitae, voluptatibus suscipit quidem
+                                ratione velit quia accusamus adipisci nostrum amet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How to use app ends here -->
+
+    <img src="./img/mockups.png" class="w-100 mt-150 mt50" alt=""  />
+
+    <!-- contact -->
+    <div class="container py-5 mt-5" id="contact">
+        <div class="row" >
+            <div class="col-md-12">
+                <h6  data-aos="fade-down">CONTACT US</h6>
+                <h1  data-aos="fade-down">We always here to help you.</h1>
+            </div>
+        </div>
+        <div class="row contact-form"  data-aos="fade-down" data-aos-delay="300">
+            <div class="col-md-5">
+                <img src="./img/contact.png" class="w-100" alt="" />
+            </div>
+            <div class="col-md-7 p-5">
+                <div class="row">
+                    <div class="contact-input col-md-6">
+                        <input placeholder="Firt Name" type="text" />
+                    </div>
+                    <div class="contact-input col-md-6">
+                        <input placeholder="Last Name" type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-input col-md-6">
+                        <input placeholder="Email Address" type="email" />
+                    </div>
+                    <div class="contact-input col-md-6">
+                        <input placeholder="Subject" type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-input col-md-12">
+                        <textarea class="contact-message" placeholder="Message" type="text"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="footer-button">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact ends here -->
+
+    <!-- FOOTER STARTS HERE -->
+    <div class="footer container-fluid text-white">
+        <div class="container mt-5">
+            <div class="row mt-5" >
+                <div class="col-md-4" style="border-right: 2px solid white" data-aos="fade-down" >
+                    <h3>COMPANY</h3>
+                    <br />
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
+                        illum, distinctio cum error officiis? Fugiat aspernatur iusto
+                        dicta praesentium?
+                    </p>
+                </div>
+                <div class="col-md-4" style="border-right: 2px solid white" data-aos="fade-down" data-aos-delay="300">
+                    <h3>QUICK LINKS</h3>
+                    <br />
+                    <ul class="nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="index.html">How It Works</a></li>
+                        <li><a class="nav-link" href="index.html">Features</a></li>
+                        <li><a class="nav-link" href="index.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="500">
+                    <h3>NEWS LATER</h3>
+                    <br />
+                    <div class="news-later">
+                        <input type="email" placeholder="Your Email Address" />
+                        <a href=""><img src="./img/Icon ionic-ios-send.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER ENDS HERE -->
+
+    <script>
+        $(function () {
+            $(window).on("scroll", function () {
+                if ($(window).scrollTop() > 50) {
+                    $(".header").addClass("active");
+                } else {
+                    //remove the background property so it comes transparent again (defined in your css)
+                    $(".header").removeClass("active");
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- Scroll to view -->
+    <script>
+
+        function features() {
+            var elmnt = document.getElementById("features");
+            elmnt.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function work(){
+            var elmnt = document.getElementById("work");
+            elmnt.scrollIntoView({
+                behavior:"smooth"
+            })
+        }
+        
+        function contact(){
+            var elmnt = document.getElementById("contact");
+            elmnt.scrollIntoView({
+                behavior:"smooth"
+            })
+        }
+    </script>
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        duration: 1000,
+    });
+  </script>
+
+
+
+</body>
+
+</html>

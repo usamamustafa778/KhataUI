@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../web.css" />
+  <title>Khata | Dashboard</title>
+</head>
+
+<body>
+  <div class="container-fluid dashboard">
+
+
+    <!-- Add New Customer -->
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center nCustomer" id="new">
+        <div class="col-md-4 bg-purple rd50 py-5 text-white">
+          <div class="row flex-column align-items-center justify-content-center" >
+            <h5>ADD CUSTOMER</h5>
+            <br>
+            <div class="col-md-8 email-input bg-light rd80 px-4 py-3 mb-2">
+                <input placeholder="Enter Name" type="email">
+            </div>
+            <div class="col-md-8 email-input bg-light rd80 px-4 py-3">
+                <input placeholder="Enter Number (optional)" type="email">
+            </div>
+            <br>
+            <div class="col-md-12">
+              <div class="row justify-content-center">
+                <button onclick="CancelNewCustomer()" class="btn-purple mx-1" type="submit">Cancel</button>
+                <button onclick="" class="btn-purple mx-1" type="submit">Save</button>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add New Customer Ends here -->
+
+    <!-- Header -->
+    <div class="row align-items-center bg-light">
+      <div class="col-md-3">
+        <h4>Nettech Ltd</h4>
+      </div>
+      <div class="col-md-9 d-flex justify-content-between">
+        <div class="d-flex align-items-center ">
+          <img src="./img/u2.png" class="cImg" alt="">
+          <div class="cName mt-3 ml-2">
+            <h6>Ali Imran</h6>
+            <p>Add Number</p>
+          </div>
+        </div>
+        <div class="cName mt-3">
+          <h6 class="text-danger">Rs. 0</h6>
+          <p>You will get</p>
+        </div>
+      </div>
+    </div>
+    <!-- Header Ends Here -->
+
+
+    <div class="row">
+      <!-- Sidebar Starts here -->
+      <div class="col-md-3 bg-purple vh-100 p-0">
+        <div class="d-flex w-100 justify-content-center">
+          <div class="bg-white col-md-5 d-flex flex-column align-items-center">
+            <h6 class="text-danger mt-2">Rs. 6000</h6>
+            <p>You will give</p>
+          </div>
+          <div class="col-md-1 p-2"></div>
+          <div class="bg-white col-md-5 d-flex flex-column align-items-center">
+            <h6 class="text-primary mt-2">Rs. 18000</h6>
+            <p>You will take</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center p-3">
+          <div class="
+              col-md-9
+              bg-light
+              rd80
+              d-flex
+              justify-content-center
+              align-items-center
+              py-2
+            ">
+            <h6 class="text-purple mt-1">View Report ></h6>
+          </div>
+        </div>
+
+        <div class="d-flex w-100 justify-content-center Report-Options">
+          <div class="bg-light col-md-5 d-flex flex-column align-items-center">
+            <h6 class="mt-2 py-2">Payable Report ></h6>
+          </div>
+          <div class="col-md-1 p-2"></div>
+          <div class="bg-light col-md-5 d-flex flex-column align-items-center">
+            <h6 class="mt-2 py-2">Recivable Report ></h6>
+          </div>
+        </div>
+        <br>
+        <div class="d-flex w-100 justify-content-center">
+          <div class="bg-purpleLight text-white col-md-6 d-flex flex-column align-items-center">
+            <h5 class="mt-2 py-2">Credit</h5>
+          </div>
+          <div class="bg-light col-md-6 d-flex flex-column align-items-center">
+            <h5 class="mt-2 py-2">Debit</h5>
+          </div>
+        </div>
+        <br>
+        <div class="d-flex text-white justify-content-between contact-detail">
+          <div class="d-flex align-items-center ">
+            <img src="./img/u2.png" class="cImg" alt="">
+            <div class="cName mt-3 ml-2">
+              <h6>Ali Imran</h6>
+              <p>Add Number</p>
+            </div>
+          </div>
+          <div class="cName mt-3">
+            <h6 class="text-danger">0</h6>
+            <p>You will get</p>
+          </div>
+        </div>
+        <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+          <div class="d-flex align-items-center ">
+            <img src="./img/u1.png" class="cImg" alt="">
+            <div class="cName mt-3 ml-2">
+              <h6>Sara Hammad</h6>
+              <p>Add Number</p>
+            </div>
+          </div>
+          <div class="cName mt-3">
+            <h6 class="text-success">Rs.3900</h6>
+            <p>You will get</p>
+          </div>
+        </a>
+
+        <div class="row justify-content-center mt-a">
+          <button class="sidebar-button bg-light" onclick="addNewCustomer()">
+            <h2 class="mr-2" style="color: red; font-weight: bold">+</h2>
+            New Customer
+          </button>
+        </div>
+      </div>
+      <!-- Sidebar Ends here -->
+
+
+
+      <!-- Body Starts here -->
+      <div class="col-md-9 p-0 bg-white w-100 h-100 vh-100">
+        <table class="table table-hover ">
+          <thead>
+            <tr>
+              <th>ENTRIES</th>
+              <th>DETAIL</th>
+              <th class="text-center">YOU GAVE</th>
+              <th class="text-center">YOU GOT</th>
+              <th class="text-right">BALANCE</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th></th>
+              <th class="text-danger text-center">0</th>
+              <th class="text-success text-center">Rs 2000</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center"></td>
+              <td class="bg-scsLite text-success text-center">2000</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Body Endss here -->
+    </div>
+  </div>
+
+  <script>
+    function addNewCustomer() {
+      document.getElementById("new").style.display = "flex";
+    }
+    function CancelNewCustomer() {
+      document.getElementById("new").style.display = "none";
+    }
+  </script>
+
+
+<script>
+  
+</script>
+
+
+
+
+</body>
+
+</html>

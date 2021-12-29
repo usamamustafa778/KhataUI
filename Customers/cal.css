@@ -1,0 +1,77 @@
+#calculator {
+}
+
+/* Clear Floats to make sure #calculator includes them correctly */
+.keys, .top {
+    overflow: hidden;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Applying css on all the keys */
+.keys span, #clear {
+    float: left;
+    position: relative;
+    top: 0;
+    /* Specifies the type of cursor to be displayed when pointing on an element. */
+    cursor: pointer;
+
+    height: 36px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.089);
+
+    margin: 0 7px 11px 0;
+
+    color: #888;
+    line-height: 36px;
+    text-align: center;
+
+    /* prevent selection of text inside keys */
+    user-select: none;
+
+    /* Transitions allows you to change property values smoothly  */
+    transition: all 0.2s ease;
+}
+
+.keys span.operator {
+    background: #FFF0F5;
+}
+
+/* Eval Button */
+.keys span.eval {
+    grid-row: 6;
+    grid-column: 3/1;
+}
+
+/* Clear Button */
+#clear {
+    background: #ff9fa8;
+    box-shadow: 0px 4px #ff7c87;
+    color: white;
+}
+
+#clear:hover {
+    background: #f68991;
+    box-shadow: 0px 4px #d3545d;
+    color: white;
+}
+
+#clear:active {
+    top: 4px;
+    box-shadow: 0px 0px #d3545d;
+}
+
+/* Other Buttons */
+.keys span:hover {
+    background: #9c89f6;
+    box-shadow: 0px 4px #6b54d3;
+    color: white;
+}
+
+.keys span:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
