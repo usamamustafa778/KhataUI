@@ -47,22 +47,12 @@
 
 
     <!-- Header -->
-    <div class="row align-items-center bg-light">
+    <div class="row align-items-center bg-light header">
       <div class="col-md-3">
         <a href="../SelectBusiness.html" class="business-name"><h3>Nettech Ltd</h3></a>
       </div>
       <div class="col-md-9 d-flex justify-content-between border-left">
-        <div class="d-flex align-items-center ">
-          <img src="./img/u1.png" class="cImg" alt="">
-          <div class="cName mt-3 ml-2">
-            <h6>Sara Hammad</h6>
-            <p>Add Number</p>
-          </div>
-        </div>
-        <div class="cName mt-3">
-          <h6 class="text-success">Rs. 3900</h6>
-          <p>You will get</p>
-        </div>
+        <h5>All Transactions</h5>
       </div>
     </div>
     <!-- Header Ends Here -->
@@ -83,13 +73,8 @@
             <p>You will take</p>
           </div>
         </div>
-
-        <div class="row justify-content-center p-3">
-          <div class="col-md-9 bg-light rd80 d-flex justify-content-center align-items-center py-2">
-            <a href="report.html" class="text-purple mt-1">View Report ></a>
-          </div>
-        </div>
-
+<br>
+       
         <div class="d-flex w-100 justify-content-center">
           <div class="bg-purpleLight text-white col-md-6 d-flex flex-column align-items-center">
             <h5 class="mt-2 py-2">Credit</h5>
@@ -139,6 +124,17 @@
 
       <!-- Body Starts here -->
       <div class="col-md-9 p-0 bg-white w-100 h-100 vh-100">
+          <div class="d-flex justify-content-between p-4">
+            <select name="" id="">
+              <option value="all">All</option>
+              <option value="this month">This Month</option>
+              <option value="last week">Last Week</option>
+              <option value="last month">Last Month</option>
+              <option value="single date">Single Date</option>
+              <option value="between dates">Between Dates</option>
+            </select>
+            <button class="btn btn-outline-danger">pdf</button>
+          </div>
         <table class="table table-hover ">
           <thead>
             <tr>

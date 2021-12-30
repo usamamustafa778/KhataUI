@@ -56,7 +56,9 @@ body{
 
 
 
-
+.header{
+    min-height: 70px;
+}
 .rh-left > img{
     cursor: pointer;
     max-height: 25px;
