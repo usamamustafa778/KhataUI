@@ -111,6 +111,20 @@ body{
     background-color: rgba(0, 0, 0, 0.698);
     padding: 20px;
 }
+.business-name{
+    color: black;
+}
+.business-name:hover{
+    text-decoration: none;
+    color: black;
+}
+.businessListName{
+    color: black;
+}
+.businessListName:hover{
+    text-decoration: none;
+    color: black;
+}
 .sidebar-button{
     width: 180px;
     border-top-left-radius: 50px;
