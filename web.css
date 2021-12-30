@@ -220,6 +220,12 @@ body{
     outline: none;
     border-bottom: 1px solid rgb(179, 179, 179);
 }
+.recordButtons{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 50px;
+}
 .recordDetailsButtons{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
