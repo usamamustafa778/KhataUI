@@ -72,7 +72,7 @@
         <div class="d-flex align-items-center ">
           <img src="./img/u1.png" class="cImg" alt="">
           <div class="cName mt-3 ml-2">
-            <h6>Sara Hammad</h6>
+            <h6 style="cursor: pointer;" onclick="customerProfile()">Sara Hammad</h6>
             <p>Add Number</p>
           </div>
         </div>
@@ -342,7 +342,7 @@
             <img src="./img/edit.svg" alt="">
           </div>
         </div>
-        
+
         <!-- Phone Number -->
         <div class="row shadow-sm p-2 bg-white mt-1">
           <div class="col-md-12">
@@ -350,7 +350,7 @@
             <h6 class="text-purple">03136224778</h6>
           </div>
         </div>
-        
+
         <!-- Business Type -->
         <div class="row p-2 mt-1 shadow-sm bg-white ">
           <div class="col-md-12 d-flex justify-content-between">
@@ -358,7 +358,7 @@
             <img src="./img/edit.svg" alt="">
           </div>
         </div>
-        
+
         <!-- Business Category -->
         <div class="row p-2 mt-1 shadow-sm bg-white ">
           <div class="col-md-12 d-flex justif y-content-between">
@@ -366,22 +366,22 @@
             <img src="./img/edit.svg" alt="">
           </div>
         </div>
-        
+
         <!-- Delete Button -->
-        <div class="row px-2 py-4 mt-1 shadow-sm bg-white ">
+        <div class="row px-2 py-4 mt-1 shadow-sm bg-white" style="margin-bottom: 100px; cursor: pointer;">
           <div class="col-md-12 d-flex">
             <img src="./img/delete.svg" alt="">
-            <h5 class="mt-2 text-danger ml-3">Business Category</h5>
+            <h5 class="mt-2 text-danger ml-3">Delete</h5>
           </div>
         </div>
-        
+
       </div>
       <!-- Business Profile Ends here -->
 
 
 
       <!-- Body Starts here -->
-      <div class="col-md-9 p-0 bg-white w-100 h-100 vh-100 record-table">
+      <div class="col-md-9 p-0 bg-white w-100 h-100 vh-100 record-table" id="record-table">
         <table class="table table-hover ">
           <thead>
             <tr>
@@ -521,6 +521,69 @@
         </div>
 
       </div>
+
+      <!-- Person Profile -->
+      <div class="person-profile bg-light flex-column" id="personProfile">
+        <div class="row bg-white">
+          <div class="col-md-12 py-3 d-flex justify-content-end">
+            <img src="./img/end.svg" style="height: 20px; cursor: pointer;" alt="" onclick="closePersonProfile()">
+          </div>
+        </div>
+        <br>
+        <!-- Profile Image -->
+        <div class="row justify-content-center align-items-center">
+          <img src="./img/p-profile.png" alt="">
+        </div>
+
+        <br>
+
+        <!-- Customer Name -->
+        <div class="row shadow-sm p-2 bg-white">
+          <div class="col-md-12 ">
+            <div class="d-flex justify-content-between">
+              <p class="p-titles">Customer Name</p>
+              <img src="./img/edit.svg" alt="">
+            </div>
+            <h5 class="text-purple">Sara Hammad</h5>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justify-content-between">
+            <p class="p-titles mt-3">Address</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="row shadow-sm p-2 bg-white mt-1">
+          <div class="col-md-12">
+            <p class="p-titles">Phone Number</p>
+            <h6 class="text-purple">03136224778</h6>
+          </div>
+        </div>
+
+        <!-- Switch -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justify-content-between">
+            <p class="p-titles mt-3">Switch To Supplier</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+
+        <!-- Delete Button -->
+        <div class="row px-2 py-4 mt-1 shadow-sm bg-white" style="margin-bottom: 100px; cursor: pointer;">
+          <div class="col-md-12 d-flex">
+            <img src="./img/delete.svg" alt="">
+            <h5 class="mt-2 text-danger ml-3">Delete</h5>
+          </div>
+        </div>
+
+      </div>
+      <!-- Person Profile Ends Here -->
+
       <!-- Body Endss here -->
     </div>
   </div>
@@ -739,6 +802,26 @@
       document.getElementById("b-profile").style.display = "none";
       document.getElementById("sidebar-back-icon").style.display = "none";
       document.getElementById("logo").style.display = "block";
+    }
+  </script>
+
+
+  <!-- Customer Profile -->
+  <script>
+    var profile = document.getElementById("personProfile");
+    var recordTable = document.getElementById("record-table");
+    function customerProfile() {
+      profile.style.display="flex";
+      profile.classList.add("col-md-3");
+
+      recordTable.classList.remove("col-md-9");
+      recordTable.classList.add("col-md-6");
+    }
+    function closePersonProfile(){
+      profile.style.display="none";
+
+      recordTable.classList.add("col-md-9");
+      recordTable.classList.remove("col-md-6");
     }
   </script>
 
