@@ -14,22 +14,21 @@
   <title>Khata | Dashboard</title>
 </head>
 
-<body>
+<body onload="load()">
   <div class="container-fluid dashboard">
-
 
     <!-- Add New Customer -->
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center nCustomer" id="new">
         <div class="col-md-4 bg-purple rd50 py-5 text-white">
-          <div class="row flex-column align-items-center justify-content-center" >
+          <div class="row flex-column align-items-center justify-content-center">
             <h5>ADD CUSTOMER</h5>
             <br>
             <div class="col-md-8 email-input bg-light rd80 px-4 py-3 mb-2">
-                <input placeholder="Enter Name" type="email">
+              <input placeholder="Enter Name" type="email">
             </div>
             <div class="col-md-8 email-input bg-light rd80 px-4 py-3">
-                <input placeholder="Enter Number (optional)" type="email">
+              <input placeholder="Enter Number (optional)" type="email">
             </div>
             <br>
             <div class="col-md-12">
@@ -38,27 +37,47 @@
                 <button onclick="" class="btn-purple mx-1" type="submit">Save</button>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </div>
     <!-- Add New Customer Ends here -->
 
+
+
+
     <!-- Header -->
-    <div class="row align-items-center bg-light">
-      <div class="col-md-3" >
-        <a href="../SelectBusiness.html" class="business-name"><h3>Nettech Ltd</h3></a>
+    <div class="row align-items-center bg-light header">
+      <div class="col-md-3 d-flex align-items-center justify-content-between">
+        <a href="../SelectBusiness.html" id="logo" class="business-name">
+          <h3 id="business-name"></h3>
+        </a>
+        <img onclick="displaySidebar()" src="./img/back.svg" id="sidebar-back-icon" alt="">
+        <div class="dropdown">
+          <img src="./img/menu.svg" class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Filter Customer List</a>
+            <a class="dropdown-item" href="#">Customer List PDF</a>
+            <a onclick="sidebar()" class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Language</a>
+            <a class="dropdown-item" href="#">Help & Support</a>
+            <a class="dropdown-item" href="#">Cash Register</a>
+            <a class="dropdown-item" href="#">Recycle Bin</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </div>
       </div>
       <div class="col-md-9 d-flex justify-content-between border-left">
         <div class="d-flex align-items-center ">
           <img src="./img/u2.png" class="cImg" alt="">
           <div class="cName mt-3 ml-2">
-            <h6>Ali Imran</h6>
+            <h6 style="cursor: pointer;" onclick="customerProfile()">Ali Imran</h6>
             <p>Add Number</p>
           </div>
         </div>
         <div class="cName mt-3">
-          <h6 class="text-danger">Rs. 0</h6>
+          <h6 class="text-success">Rs. 3900</h6>
           <p>You will get</p>
         </div>
       </div>
@@ -68,7 +87,7 @@
 
     <div class="row">
       <!-- Sidebar Starts here -->
-      <div class="col-md-3 bg-purple vh-100 p-0">
+      <div class="col-md-3 bg-purple vh-100 p-0 sidebar flex-column" id="sidebar">
         <br>
         <div class="d-flex w-100 justify-content-center">
           <div class="bg-white col-md-5 d-flex flex-column align-items-center">
@@ -97,47 +116,272 @@
           </div>
         </div>
         <br>
-        <div class="d-flex text-white justify-content-between contact-detail">
-          <div class="d-flex align-items-center ">
-            <img src="./img/u2.png" class="cImg" alt="">
-            <div class="cName mt-3 ml-2">
-              <h6>Ali Imran</h6>
-              <p>Add Number</p>
-            </div>
-          </div>
-          <div class="cName mt-3">
-            <h6 class="text-danger">0</h6>
-            <p>You will get</p>
-          </div>
-        </div>
-        <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
-          <div class="d-flex align-items-center ">
-            <img src="./img/u1.png" class="cImg" alt="">
-            <div class="cName mt-3 ml-2">
-              <h6>Sara Hammad</h6>
-              <p>Add Number</p>
-            </div>
-          </div>
-          <div class="cName mt-3">
-            <h6 class="text-success">Rs.3900</h6>
-            <p>You will get</p>
-          </div>
-        </a>
 
-        <div class="row justify-content-center mt-a">
-          <button class="sidebar-button bg-light" onclick="addNewCustomer()">
-            <h2 class="mr-2" style="color: red; font-weight: bold">+</h2>
+
+        <!-- Customers-List -->
+        <div class="customers-list">
+          <a href="customers.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u2.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Ali Imran</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-danger">0</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="customers.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u2.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Ali Imran</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-danger">0</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+          <a href="c2.html" class="d-flex text-white justify-content-between contact-detail">
+            <div class="d-flex align-items-center ">
+              <img src="./img/u1.png" class="cImg" alt="">
+              <div class="cName mt-3 ml-2">
+                <h6>Sara Hammad</h6>
+                <p>Add Number</p>
+              </div>
+            </div>
+            <div class="cName mt-3">
+              <h6 class="text-success">Rs.3900</h6>
+              <p>You will get</p>
+            </div>
+          </a>
+        </div>
+        <!-- Customers-List Ends Here -->
+
+        <div class="bg-light new-customer">
+          <button class="sidebar-button" onclick="addNewCustomer()">
+            <h2 class="" style="color: red; font-weight: bold">+</h2>
             New Customer
           </button>
         </div>
       </div>
-      
       <!-- Sidebar Ends here -->
+
+      <!-- Business Profile Start -->
+      <div class="business-profile col-md-3 flex-column" id="b-profile">
+        <br>
+        <!-- Profile Image -->
+        <div class="row justify-content-center align-items-center">
+          <img src="./img/b-profile.png" alt="">
+        </div>
+
+        <br>
+
+        <!-- Business Name -->
+        <div class="row shadow-sm p-2 bg-white">
+          <div class="col-md-12 ">
+            <div class="d-flex justify-content-between">
+              <p class="p-titles">Business Name</p>
+              <img src="./img/edit.svg" alt="">
+            </div>
+            <h5 class="text-purple">Nettech</h5>
+          </div>
+        </div>
+
+        <!-- Business Owner -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justify-content-between">
+            <p class="p-titles mt-3">Business Owner</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="row shadow-sm p-2 bg-white mt-1">
+          <div class="col-md-12">
+            <p class="p-titles">Phone Number</p>
+            <h6 class="text-purple">03136224778</h6>
+          </div>
+        </div>
+
+        <!-- Business Type -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justify-content-between">
+            <p class="p-titles mt-3">Business Type</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+        <!-- Business Category -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justif y-content-between">
+            <p class="p-titles mt-3">Business Category</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+        <!-- Delete Button -->
+        <div class="row px-2 py-4 mt-1 shadow-sm bg-white" style="margin-bottom: 100px; cursor: pointer;">
+          <div class="col-md-12 d-flex">
+            <img src="./img/delete.svg" alt="">
+            <h5 class="mt-2 text-danger ml-3">Delete</h5>
+          </div>
+        </div>
+
+      </div>
+      <!-- Business Profile Ends here -->
 
 
 
       <!-- Body Starts here -->
-      <div class="col-md-9 p-0 bg-white w-100 h-100 vh-100">
+      <div class="col-md-9 p-0 bg-white w-100 h-100 vh-100 record-table" id="record-table">
         <table class="table table-hover ">
           <thead>
             <tr>
@@ -150,8 +394,8 @@
             <tr>
               <th></th>
               <th></th>
-              <th class="text-danger text-center">0</th>
-              <th class="text-success text-center">Rs 2000</th>
+              <th class="text-danger text-center">Rs 5905</th>
+              <th class="text-success text-center">Rs 4000</th>
               <th></th>
             </tr>
           </thead>
@@ -166,103 +410,420 @@
               <td class="bg-scsLite text-success text-center">2000</td>
               <td>0</td>
             </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center">3000</td>
+              <td class="bg-scsLite text-success text-center"></td>
+              <td>2000</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center"></td>
+              <td class="bg-scsLite text-success text-center">2000</td>
+              <td>0</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center">3000</td>
+              <td class="bg-scsLite text-success text-center"></td>
+              <td>2000</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center"></td>
+              <td class="bg-scsLite text-success text-center">2000</td>
+              <td>0</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center">3000</td>
+              <td class="bg-scsLite text-success text-center"></td>
+              <td>2000</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center"></td>
+              <td class="bg-scsLite text-success text-center">2000</td>
+              <td>0</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center">3000</td>
+              <td class="bg-scsLite text-success text-center"></td>
+              <td>2000</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center"></td>
+              <td class="bg-scsLite text-success text-center">2000</td>
+              <td>0</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center">3000</td>
+              <td class="bg-scsLite text-success text-center"></td>
+              <td>2000</td>
+            </tr>
+            <tr onclick="recordDetails()" class="cursor-P">
+              <td class="d-flex flex-column">
+                <span>Oct 28, 2021 5:16 pm </span>
+                <span>Send Message </span>
+              </td>
+              <td></td>
+              <td class="bg-dgLite text-danger text-center"></td>
+              <td class="bg-scsLite text-success text-center">2000</td>
+              <td>0</td>
+            </tr>
           </tbody>
         </table>
+
+        <div class="d-flex justify-content-end p-4 recordButtons">
+          <div class="d-flex flex-column">
+            <button class="btn btn-danger" onclick="YouGave()">You Gave</button>
+            <button class="btn btn-success mt-3" onclick="YouGot()">You Got</button>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Person Profile -->
+      <div class="person-profile bg-light flex-column" id="personProfile">
+        <div class="row bg-white">
+          <div class="col-md-12 py-3 d-flex justify-content-end">
+            <img src="./img/end.svg" style="height: 20px; cursor: pointer;" alt="" onclick="closePersonProfile()">
+          </div>
+        </div>
+        <br>
+        <!-- Profile Image -->
+        <div class="row justify-content-center align-items-center">
+          <img src="./img/p-profile2.png" alt="">
+        </div>
+
+        <br>
+
+        <!-- Customer Name -->
+        <div class="row shadow-sm p-2 bg-white">
+          <div class="col-md-12 ">
+            <div class="d-flex justify-content-between">
+              <p class="p-titles">Customer Name</p>
+              <img src="./img/edit.svg" alt="">
+            </div>
+            <h5 class="text-purple">Ali Imran</h5>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justify-content-between">
+            <p class="p-titles mt-3">Address</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="row shadow-sm p-2 bg-white mt-1">
+          <div class="col-md-12">
+            <p class="p-titles">Phone Number</p>
+            <h6 class="text-purple">03136224778</h6>
+          </div>
+        </div>
+
+        <!-- Switch -->
+        <div class="row p-2 mt-1 shadow-sm bg-white ">
+          <div class="col-md-12 d-flex justify-content-between">
+            <p class="p-titles mt-3">Switch To Supplier</p>
+            <img src="./img/edit.svg" alt="">
+          </div>
+        </div>
+
+
+        <!-- Delete Button -->
+        <div class="row px-2 py-4 mt-1 shadow-sm bg-white" style="margin-bottom: 100px; cursor: pointer;">
+          <div class="col-md-12 d-flex">
+            <img src="./img/delete.svg" alt="">
+            <h5 class="mt-2 text-danger ml-3">Delete</h5>
+          </div>
+        </div>
+
+      </div>
+      <!-- Person Profile Ends Here -->
+
       <!-- Body Endss here -->
     </div>
   </div>
 
-     <!-- Record Details -->
-     <div class="container-fluid">
-      <div class="row justify-content-center align-items-center nCustomer" id="recordDetails">
-        <div class="col-md-6 bg-white py-4 px-5" style="border-radius:30px;">
-          <div class="row justify-content-between align-items-center">
-            <span>
-              <h3>you got Rs.<b class="text-success" id="amountGot"></b> from Sara</h3>
-            </span>
-            <img onclick="hideRecordDetails()" class="cursor-P" src="./img/end.svg" style="max-height:20px;" alt="">
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-3"><h6>AMOUNT</h6></div>
-                <div class="col-md-9"><input class="rdField" id="screen"></input>
-                </div>
+
+  <!-- Record Details -->
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center nCustomer" id="recordDetails">
+      <div class="col-md-6 bg-white py-4 px-5" style="border-radius:30px;">
+        <div class="row justify-content-between align-items-center">
+          <span>
+            <h3>you got Rs.<b class="text-success" id="amountGot"></b> from Sara</h3>
+          </span>
+          <img onclick="hideRecordDetails()" class="cursor-P" src="./img/end.svg" style="max-height:20px;" alt="">
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-3">
+                <h6>AMOUNT</h6>
               </div>
-              <br>
-              <div class="row">
-                <div class="col-md-3"><h6>DETAIL</h6></div>
-                <div class="col-md-9"><input class="rdField" type="text" name="" id=""></div>
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-md-3"><h6>DATE</h6></div>
-                <div class="col-md-9"><input class="rdField" type="text"></div>
+              <div class="col-md-9"><input class="rdField" id="screen"></input>
               </div>
             </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-              <div id="calculator">
-                <div class="keys">
-                  <!-- operators and other keys -->
-                  <span id="clear">C</span>
-                  <span class="operator">-</span>
-                  <span class="operator">÷</span>
-                  <span class="operator">+</span>
-                  <span class="operator">x</span>
-                  <span>.</span>
-                  <span>7</span>
-                  <span>8</span>
-                  <span>9</span>
-                  <span>4</span>
-                  <span>5</span>
-                  <span>6</span>
-                  <span>1</span>
-                  <span>2</span>
-                  <span>3</span>
-                  <span>0</span>
-                  <span class="eval operator">=</span>
-                </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                <h6>DETAIL</h6>
+              </div>
+              <div class="col-md-9"><input class="rdField" type="text" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                <h6>DATE</h6>
+              </div>
+              <div class="col-md-9"><input class="rdField" type="text"></div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <div id="calculator">
+              <div class="keys">
+                <!-- operators and other keys -->
+                <span id="clear">C</span>
+                <span class="operator">-</span>
+                <span class="operator">÷</span>
+                <span class="operator">+</span>
+                <span class="operator">x</span>
+                <span>.</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>0</span>
+                <span class="eval operator">=</span>
               </div>
             </div>
           </div>
-          <br>
-          <div class="recordDetailsButtons">
-            <button >Update </button>
-            <button class="bg-danger text-white">Delete</button>
-          </div>
+        </div>
+        <br>
+        <div class="recordDetailsButtons">
+          <button>Update </button>
+          <button class="bg-danger text-white">Delete</button>
         </div>
       </div>
     </div>
-    <!-- Record Details Ends here -->
+  </div>
+  <!-- Record Details Ends here -->
 
-<!-- Calculator -->
-<script type="text/javascript" src="cal.js"></script>
 
-<!-- New Customer -->
-<script>
-  function addNewCustomer() {
-    document.getElementById("new").style.display = "flex";
-  }
-  function CancelNewCustomer() {
-    document.getElementById("new").style.display = "none";
-  }
-</script>
+  <!-- New Record -->
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center nCustomer" id="newRecord">
+      <div class="col-md-6 bg-white py-4 px-5" style="border-radius:30px;">
+        <div class="row justify-content-between align-items-center">
+          <span>
+            <h3 id="money" class="d-flex">You<p id="moneyStatus" class="ml-2"></p>
+            </h3>
+          </span>
+          <img onclick="CloseNewRecord()" class="cursor-P" src="./img/end.svg" style="max-height:20px;" alt="">
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-3">
+                <h6>AMOUNT</h6>
+              </div>
+              <div class="col-md-9"><input class="rdField" id="screen"></input>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                <h6>DETAIL</h6>
+              </div>
+              <div class="col-md-9"><input class="rdField" type="text" name="" id=""></div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-md-3">
+                <h6>DATE</h6>
+              </div>
+              <div class="col-md-9"><input class="rdField" type="text"></div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <div id="calculator">
+              <div class="keys">
+                <!-- operators and other keys -->
+                <span id="clear">C</span>
+                <span class="operator">-</span>
+                <span class="operator">÷</span>
+                <span class="operator">+</span>
+                <span class="operator">x</span>
+                <span>.</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>0</span>
+                <span class="eval operator">=</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="recordDetailsButtons">
+          <button>Update </button>
+          <button class="bg-danger text-white">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- New Record Ends here -->
 
-<!-- Record Details -->
-<script>
-  function recordDetails() {
-    let amount = 2000;
-    document.getElementById("recordDetails").style.display = "flex";
-    document.getElementById("screen").defaultValue = amount;
-    document.getElementById("amountGot").innerHTML = amount;
-  }
-  function hideRecordDetails() {
-    document.getElementById("recordDetails").style.display = "none";
-  }
-</script>
+
+
+
+
+
+
+
+
+  <!-- Calculator -->
+  <script type="text/javascript" src="cal.js"></script>
+
+  <!-- New Customer -->
+  <script>
+    document.getElementById("business-name").innerHTML = "Nettech"
+
+
+
+
+    function addNewCustomer() {
+      document.getElementById("new").style.display = "flex";
+    }
+    function CancelNewCustomer() {
+      document.getElementById("new").style.display = "none";
+    }
+  </script>
+
+  <!-- Record Details -->
+  <script>
+    function recordDetails() {
+      let amount = 5000;
+      document.getElementById("recordDetails").style.display = "flex";
+      document.getElementById("screen").defaultValue = amount;
+      document.getElementById("amountGot").innerHTML = amount;
+    }
+    function hideRecordDetails() {
+      document.getElementById("recordDetails").style.display = "none";
+    }
+
+
+    function YouGot() {
+      document.getElementById("newRecord").style.display = "flex";
+      document.getElementById("money").style.color = "green"
+      document.getElementById("moneyStatus").innerHTML = "got"
+    }
+    function YouGave() {
+      document.getElementById("newRecord").style.display = "flex";
+      document.getElementById("money").style.color = "red"
+      document.getElementById("moneyStatus").innerHTML = "gave"
+    }
+    function CloseNewRecord() {
+      document.getElementById("newRecord").style.display = "none";
+    }
+  </script>
+
+
+
+  <!-- Sidebar -->
+  <script>
+    function sidebar() {
+      document.getElementById("sidebar").style.display = "none";
+      document.getElementById("b-profile").style.display = "flex";
+      document.getElementById("sidebar-back-icon").style.display = "block";
+      document.getElementById("logo").style.display = "none";
+    }
+    function displaySidebar() {
+      document.getElementById("sidebar").style.display = "flex";
+      document.getElementById("b-profile").style.display = "none";
+      document.getElementById("sidebar-back-icon").style.display = "none";
+      document.getElementById("logo").style.display = "block";
+    }
+  </script>
+
+
+  <!-- Customer Profile -->
+  <script>
+    var profile = document.getElementById("personProfile");
+    var recordTable = document.getElementById("record-table");
+    function customerProfile() {
+      profile.style.display="flex";
+      profile.classList.add("col-md-3");
+
+      recordTable.classList.remove("col-md-9");
+      recordTable.classList.add("col-md-6");
+    }
+    function closePersonProfile(){
+      profile.style.display="none";
+
+      recordTable.classList.add("col-md-9");
+      recordTable.classList.remove("col-md-6");
+    }
+  </script>
 
 
 </body>
