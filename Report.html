@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+
+  <style>
+    * {
+      margin: 0;
+      --purple: #4413a7;
+      font-family: sans-serif;
+    }
+
+    .bg-purple {
+      background-color: var(--purple);
+    }
+
+    .text-white {
+      color: #ffff;
+    }
+
+    .mt-1 {
+      margin-top: 10px;
+    }
+
+    .text-gray {
+      color: rgb(160, 160, 160);
+    }
+
+    .text-danger {
+      color: rgb(240, 49, 49);
+    }
+
+    .text-success {
+      color: rgb(19, 209, 120);
+    }
+
+    .border {
+      border: 1px solid rgb(204, 204, 204);
+    }
+
+    .border-right {
+      border-right: 1px solid rgb(204, 204, 204);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bg-lightRed {
+      background-color: rgb(255, 210, 210) !important;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .py-5 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .bg-lightGreen {
+      background-color: rgb(193, 255, 234);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .account__statement {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    .statement__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .statement__Box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .table {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+    }
+
+    .table .thead-light th {
+      color: #495057;
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+
+    .table th,
+    .table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+
+    .table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+    }
+
+    .table {
+      border-collapse: collapse !important;
+    }
+
+    .table td,
+    .table th {
+      background-color: #fff !important;
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #ddd !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-purple header text-white">
+    <div>
+      <h3>Sallery</h3>
+      <p class="mt-1">03136224778</p>
+    </div>
+    <img src="./img/logo.png" class="mr-4" alt="">
+  </nav>
+  <div class="container">
+    <div class="account__statement">
+      <h1>Account Statement</h1>
+      <h3 class="text-gray mt-1">(27 Sep 21 - 25 Jan 22)</h3>
+    </div>
+  </div>
+  <div class="container border py-5">
+    <div class="statement__container">
+      <div class="statement__Box border-right">
+        <h4 class="text-gray">Total Debit(-)</h4>
+        <h2 class="mt-1 text-danger">Rs. 72,000</h2>
+      </div>
+      <div class="statement__Box border-right">
+        <h4 class="text-gray">Total Credit(+)</h4>
+        <h2 class="mt-1 text-success ">Rs 52,000</h2>
+      </div>
+      <div class="statement__Box">
+        <h4 class="text-gray">Net Balance</h4>
+        <h2 class="mt-1 text-danger">Rs 20,000</h2>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row mt-4 mb-2">
+      <h2>No. of Entries: 4 (All)</h2>
+    </div>
+    <br>
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>Date</th>
+          <th>Name</th>
+          <th>Details</th>
+          <th>Debit(-)</th>
+          <th>Credit(+)</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>27 Sep 2021</td>
+          <td>Usama Bhatti</td>
+          <td></td>
+          <td class="bg-lightRed text-danger"></td>
+          <td class="bg-lightGreen text-success">52,000</td>
+          <td>Rs 52,000 cr</td>
+        </tr>
+        <tr>
+          <td>27 Sep 2021</td>
+          <td>Usama Bhatti</td>
+          <td></td>
+          <td class="bg-lightRed text-danger"></td>
+          <td class="bg-lightGreen text-success">52,000</td>
+          <td>Rs 52,000 cr</td>
+        </tr>
+        <tr>
+          <td>27 Sep 2021</td>
+          <td>Usama Bhatti</td>
+          <td></td>
+          <td class="bg-lightRed text-danger"></td>
+          <td class="bg-lightGreen text-success">52,000</td>
+          <td>Rs 52,000 cr</td>
+        </tr>
+        <tr>
+          <td>27 Sep 2021</td>
+          <td>Usama Bhatti</td>
+          <td></td>
+          <td class="bg-lightRed text-danger"></td>
+          <td class="bg-lightGreen text-success">52,000</td>
+          <td>Rs 52,000 cr</td>
+        </tr>
+        <tr>
+          <td>27 Sep 2021</td>
+          <td>Usama Bhatti</td>
+          <td></td>
+          <td class="bg-lightRed text-danger"></td>
+          <td class="bg-lightGreen text-success">52,000</td>
+          <td>Rs 52,000 cr</td>
+        </tr>
+      </tbody>
+      <thead class="thead-light">
+        <tr>
+          <th>Grand Total</th>
+          <th></th>
+          <th></th>
+          <th>Rs. 72,000</th>
+          <th>Rs. 52,000</th>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+    <div class="row">
+      <h3>Report Generated: 10.30 AM | 25 Jan 2022</h3>
+    </div>
+    <br><br>
+  </div>
+</body>
+
+</html>
